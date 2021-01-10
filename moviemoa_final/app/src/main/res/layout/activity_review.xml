@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="276dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/poster"
+            android:layout_width="161dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/radar_chart"
+            app:layout_constraintEnd_toStartOf="@+id/txCinema"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/txTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="영화제목"
+                    android:layout_margin="5dp"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="장르"
+                    android:textColor="#000"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="감독"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="배우"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="등급"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/radar_chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" >
+    </com.github.mikephil.charting.charts.RadarChart>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
